@@ -27,6 +27,8 @@
 
 ;; GROUP: Convenience -> HL Line
 (global-hl-line-mode)
+;;(set-face-background 'hl-line "#3e4448")
+;;(set-face-foreground 'highlight nil)
 
 ;; GROUP: Convenience -> Ibuffer
 (setq ibuffer-use-other-window t) ;; always display ibuffer in another window

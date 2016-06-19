@@ -56,12 +56,18 @@
 ;;                               ;;
 ;; GROUP: Convenience -> Company ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-hook 'after-init-hook 'global-company-mode)
+(defun init-company ()
+  (global-company-mode)
+  (setq company-backends (delete 'company-clang company-backends))
+)
+
+(add-hook 'after-init-hook 'init-company)
 
 ;;company-backends
+
 (require 'company-c-headers)
 
-(add-to-list 'company-backends 'company-c-headers)
+(add-to-list 'company-backends 'company-c-headers t)
 (add-to-list 'company-c-headers-path-system "/usr/include/c++/5")
 
 
@@ -183,6 +189,8 @@
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
               (ggtags-mode 1))))
 
+(setq-local imenu-create-index-function #'ggtags-build-imenu-index)
+
 (define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
 (define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
 (define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
@@ -232,4 +240,22 @@
 ;; function-args
 (require 'function-args)
 (fa-config-default)
+
+;;;;;;;;;;;;
+;; rebox2 ;;
+;;;;;;;;;;;;
+;;(setq rebox-style-loop '(24 16))
+;;(require 'rebox2)
+;;(global-set-key [(meta q)] 'rebox-dwim)
+;;(global-set-key [(shift meta q)] 'rebox-cycle)
+;;(rebox-mode t)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; clean-aindent-mode ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; (require 'clean-aindent-mode)
+;; (add-hook 'prog-mode-hook 'clean-aindent-mode)
+
+
 
