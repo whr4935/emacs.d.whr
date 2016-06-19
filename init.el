@@ -168,9 +168,9 @@
 (require 'semantic/ia)
 (require 'semantic/bovine/gcc)
 
-(defun my-semantic-hook()
-  (imenu-add-to-menubar "TAGS"))
-(add-hook 'semantic-init-hooks 'my-semantic-hook)
+;; (defun my-semantic-hook()
+;;   (imenu-add-to-menubar "TAGS"))
+;; (add-hook 'semantic-init-hooks 'my-semantic-hook)
 
 (semantic-mode 1)
 
@@ -254,8 +254,27 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; clean-aindent-mode ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
-;; (require 'clean-aindent-mode)
-;; (add-hook 'prog-mode-hook 'clean-aindent-mode)
+(require 'clean-aindent-mode)
+(add-hook 'prog-mode-hook 'clean-aindent-mode)
+
+
+;;;;;;;;;;;;;
+;; Folding ;;
+;;;;;;;;;;;;;
+(add-hook 'c-mode-common-hook   'hs-minor-mode)
+(setq
+ c-default-style "linux")
+
+(global-set-key (kbd "RET") 'newline-and-indent)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Package: dtrt-indent ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (require 'dtrt-indent)
+;; (dtrt-indent-mode 1)
+
+
 
 
 
