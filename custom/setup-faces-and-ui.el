@@ -2,6 +2,8 @@
 (provide 'setup-faces-and-ui)
 
 
+(load-theme 'sanityinc-tomorrow-eighties t)
+
 ;; you won't need any of the bar thingies
 ;; turn it off to save screen estate
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -27,7 +29,7 @@
 
 ;; change font to Inconsolata for better looking text
 ;; remember to install the font Inconsolata first
-(setq default-frame-alist '((font . "Inconsolata-12")))
+(setq default-fframe-alist '((font . "Inconsolata-12")))
 ;; set italic font for italic face, since Emacs does not set italic
 ;; face automatically
 (set-face-attribute 'italic nil
@@ -35,3 +37,4 @@
 
 (set-frame-width (selected-frame) 135)
 (set-frame-height (selected-frame) 42)
+
