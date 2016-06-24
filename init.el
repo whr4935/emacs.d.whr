@@ -5,10 +5,10 @@
 
 (require 'package)
 (setq package-archives '(
-			 ;;("myelpa" . "~/workspace/emacs/myelpa") 
-			 ("melpa" . "http://melpa.org/packages/")
-			 ;;("melpa-stable" . "http://stable.melpa.org/packages/")
-			 ))
+             ;;("myelpa" . "~/workspace/emacs/myelpa")
+             ("melpa" . "http://melpa.org/packages/")
+             ;;("melpa-stable" . "http://stable.melpa.org/packages/")
+             ))
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/custom/")
 
@@ -29,6 +29,7 @@
 (require 'setup-text)
 (require 'setup-local)
 
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ibuffer                            ;;
@@ -222,12 +223,3 @@
 ;;  ;; Your init file should contain only one such instance.
 ;;  ;; If there is more than one, they won't work right.
 ;;  )
-
-
-
-
-
-
-
-
-

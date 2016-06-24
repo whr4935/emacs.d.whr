@@ -1,4 +1,3 @@
-
 (provide 'init-cedet)
 
 ;; CEDET
@@ -15,10 +14,15 @@
 
 (global-semantic-mru-bookmark-mode)
 (defun my-semantic-hook()
-  (imenu-add-to-menubar "TAGS"))
+  ;; (imenu-add-to-menubar "TAGS")
+  )
 (add-hook 'semantic-init-hooks 'my-semantic-hook)
 
 (semantic-mode 1)
+
+;; if you want to enable support for gnu global
+(semanticdb-enable-gnu-global-databases 'c-mode)
+(semanticdb-enable-gnu-global-databases 'c++-mode)
 
 (require 'ede)
 (global-ede-mode t)
