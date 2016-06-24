@@ -9,6 +9,7 @@
           (lambda ()
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
               (ggtags-mode 1)
+              (setq-local imenu-create-index-function #'ggtags-build-imenu-index)
               )))
 ;; (setq-local imenu-create-index-function #'ggtags-build-imenu-index)
 (add-hook 'lisp-mode-hook (lambda()

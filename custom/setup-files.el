@@ -1,4 +1,3 @@
-
 (provide 'setup-files)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -79,3 +78,6 @@
  recentf-max-menu-items 30
  recentf-max-saved-items 5000
  )
+
+
+(add-hook 'before-save-hook 'whitespace-cleanup)

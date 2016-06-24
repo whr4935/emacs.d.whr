@@ -2,10 +2,11 @@
 (provide 'setup-faces-and-ui)
 
 
-(set-frame-width (selected-frame) 135)
-(set-frame-height (selected-frame) 42)
 
 (load-theme 'sanityinc-tomorrow-eighties t)
+
+
+
 
 ;; you won't need any of the bar thingies
 ;; turn it off to save screen estate
@@ -37,5 +38,9 @@
 ;; face automatically
 (set-face-attribute 'italic nil
                     :family "Inconsolata-Italic")
+
+
+(set-frame-width (selected-frame) 135)
+(set-frame-height (selected-frame) 42)
 
 

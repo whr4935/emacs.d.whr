@@ -152,7 +152,7 @@
 ;; rebox2 ;;
 ;;;;;;;;;;;;
 ;;(setq rebox-style-loop '(24 16))
-;; (require 'rebox2)
+(require 'rebox2)
 ;; ;;(global-set-key [(meta q)] 'rebox-dwim)
 ;; ;;(global-set-key [(shift meta q)] 'rebox-cycle)
 ;; (rebox-mode t)
