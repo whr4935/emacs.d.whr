@@ -9,3 +9,6 @@ helm-doc.org
 ede-projects.el
 auto-save-list/
 eshell
+init.el.before_ecb_2.40
+places
+tutorial/
