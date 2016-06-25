@@ -1,6 +1,7 @@
-
 (provide 'setup-faces-and-ui)
 
+(add-to-list 'default-frame-alist '(height . 40))
+(add-to-list 'default-frame-alist '(width . 120))
 
 
 (load-theme 'sanityinc-tomorrow-eighties t)
@@ -40,7 +41,5 @@
                     :family "Inconsolata-Italic")
 
 
-(set-frame-width (selected-frame) 135)
-(set-frame-height (selected-frame) 42)
-
-
+;; (set-frame-width (selected-frame) 135)
+;; (set-frame-height (selected-frame) 42)

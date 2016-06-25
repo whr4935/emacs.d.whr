@@ -22,10 +22,10 @@
 (require 'semantic/bovine/gcc)
 
 (global-semanticdb-minor-mode 1)
-;; (global-semantic-idle-scheduler-mode 1)
-(global-semantic-idle-summary-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+;; (global-semantic-idle-summary-mode 1)
 (global-semantic-mru-bookmark-mode)
-(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+;; (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
 
 ;; if you want to enable support for gnu global
 (semanticdb-enable-gnu-global-databases 'c-mode)

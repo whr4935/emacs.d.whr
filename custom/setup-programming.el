@@ -1,4 +1,3 @@
-
 (provide 'setup-programming)
 
 ;; GROUP: Programming -> Languages -> C
@@ -40,18 +39,28 @@
 (setq compilation-ask-about-save nil          ; Just save before compiling
       compilation-always-kill t               ; Just kill old compile processes before starting the new one
       compilation-scroll-output 'first-error) ; Automatically scroll to first
-(global-set-key (kbd "<f5>") 'compile)
+(global-set-key (kbd "<f7>") (lambda ()
+                               (interactive)
+                               (setq-local compile-command (format "make -k -f %s" project-makefile))
+                               (setq-local compilation-read-command nil)
+                               (call-interactively 'compile)))
+
+(global-set-key (kbd "<f5>") (lambda ()
+                               (interactive)
+                               (setq-local gdb-command (format "gdb -i=mi %s" project-bin))
+                               (setq-local gdb-read-command nil)
+                               (gdb gdb-command)))
 
 ;; GROUP: Programming -> Tools -> Makefile
 ;; takenn from prelude-c.el:48: https://github.com/bbatsov/prelude/blob/master/modules/prelude-c.el
-(defun prelude-makefile-mode-defaults ()
-  (whitespace-toggle-options '(tabs))
-  (setq indent-tabs-mode t ))
+;; (defun prelude-makefile-mode-defaults ()
+;;   (whitespace-toggle-options '(tabs))
+;;   (setq indent-tabs-mode t ))
 
-(setq prelude-makefile-mode-hook 'prelude-makefile-mode-defaults)
+;; (setq prelude-makefile-mode-hook 'prelude-makefile-mode-defaults)
 
-(add-hook 'makefile-mode-hook (lambda ()
-                                (run-hooks 'prelude-makefile-mode-hook)))
+;; (add-hook 'makefile-mode-hook (lambda ()
+;;                                 (run-hooks 'prelude-makefile-mode-hook)))
 
 ;; GROUP: Programming -> Tools -> Ediff
 (setq ediff-diff-options "-w"
