@@ -206,6 +206,11 @@
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; sr-speedbar                        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq sr-speedbar-right-side nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package: dtrt-indent ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -232,8 +237,9 @@
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
    (quote
-    ((project-bin . "/home/whr/workspace/project/algorithm/src/bin/algorithm")
-     (project-bin . "/home/whr/workspace/project/algorithm/bin/algorithm")
+    (
+     (project-root . "/home/whr/workspace/project/algorithm/src/")
+     (project-bin . "/home/whr/workspace/project/algorithm/src/bin/algorithm")
      (project-makefile . "/home/whr/workspace/project/algorithm/src/Makefile")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
