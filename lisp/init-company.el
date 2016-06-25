@@ -9,7 +9,7 @@
 
 (defun init-company ()
   (global-company-mode)
-  (setq company-backends (delete 'company-clang company-backends))
+  ;; (setq company-backends (delete 'company-clang company-backends))
   (define-key c-mode-map [(tab)] 'company-complete)
   (define-key c++-mode-map [(tab)] 'company-complete)
   )

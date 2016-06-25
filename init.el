@@ -30,6 +30,7 @@
 (require 'setup-local)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+(global-set-key (kbd "M-DEL") 'kill-whole-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ibuffer                            ;;
@@ -193,8 +194,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; clean-aindent-mode ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'clean-aindent-mode)
-(add-hook 'prog-mode-hook 'clean-aindent-mode)
+;; (require 'clean-aindent-mode)
+;; (add-hook 'prog-mode-hook 'clean-aindent-mode)
 
 ;;;;;;;;;;;;;
 ;; Folding ;;
