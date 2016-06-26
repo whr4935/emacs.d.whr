@@ -3,8 +3,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; company-c-headers                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'company-c-headers)
-(add-to-list 'company-c-headers-path-system "/usr/include/c++/5")
+;; (require 'company-c-headers)
+;; (add-to-list 'company-c-headers-path-system "/usr/include/c++/5")
 ;; (add-to-list 'company-backends 'company-c-headers)
 
 
@@ -27,6 +27,11 @@
 (add-hook 'irony-mode-hook 'my-irony-mode-hook)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; company-ircony-c-headers           ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'company-irony-c-headers)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGE: company              ;;
 ;;                               ;;
@@ -47,6 +52,7 @@
         company-dabbrev-downcase nil
         company-idle-delay nil)
 
-  (add-to-list 'company-backends '(company-irony company-c-headers ;; company-gtags
-  )
+  (add-to-list 'company-backends '(company-irony company-irony-c-headers ;; company-gtags
+                                                 )
+               ))
 (add-hook 'after-init-hook 'init-company)
