@@ -25,11 +25,12 @@
 (global-semantic-idle-scheduler-mode 1)
 ;; (global-semantic-idle-summary-mode 1)
 (global-semantic-mru-bookmark-mode)
-;; (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
 
 ;; if you want to enable support for gnu global
-(semanticdb-enable-gnu-global-databases 'c-mode)
-(semanticdb-enable-gnu-global-databases 'c++-mode)
+(when (cedet-gnu-global-version-check t)
+  (semanticdb-enable-gnu-global-databases 'c-mode)
+  (semanticdb-enable-gnu-global-databases 'c++-mode))
 
 ;; (defun my-cedet-hook ()
 ;;   (local-set-key [(control return)] 'semantic-ia-complete-symbol)
