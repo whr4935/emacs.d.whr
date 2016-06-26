@@ -11,6 +11,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; irony                              ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; gen compilation database.
+;; cmake . -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+
 (require 'irony)
 (add-hook 'c++mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
@@ -45,7 +48,5 @@
         company-idle-delay nil)
 
   (add-to-list 'company-backends '(company-irony company-c-headers ;; company-gtags
-                                                 ))
-  ;; (setq company-backends '((company-irony company-c-headers )))
   )
 (add-hook 'after-init-hook 'init-company)
