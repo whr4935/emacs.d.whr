@@ -42,9 +42,18 @@
 (global-set-key (kbd "<f7>") (lambda ()
                                (interactive)
                                (setq-local compile-command (format "make -k -f %s" project-makefile))
-                               (setq-local default-directory project-root)
+                               (setq-local default-directory project-build-root)
                                (setq-local compilation-read-command nil)
                                (call-interactively 'compile)))
+
+(global-set-key (kbd "S-<f7>") (lambda ()
+                               (interactive)
+                               (setq-local compile-command (format "make clean -f %s" project-makefile))
+                               (setq-local default-directory project-build-root)
+                               (setq-local compilation-read-command nil)
+                               (call-interactively 'compile)))
+
+
 
 (global-set-key (kbd "<f5>") (lambda ()
                                (interactive)

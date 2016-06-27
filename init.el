@@ -238,17 +238,9 @@
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
    (quote
-    ((company-c-headers-path-user "-I/include/" " -I.")
-     (company-clang-arguments "-I/include/" "-I.")
-     (company-c-headers-path-user . "-I/include/ -I.")
-     (company-clang-arguments . "-I/include/ -I.")
-     (project-bin . "/home/whr/workspace/project/c_plus_plus_primer/src/bin/c_plus_plus_primer")
-     (project-bin . "/home/whr/workspace/project/c_plus_plus_primer/src/bin/algorithm")
-     (project-makefile . "/home/whr/workspace/project/c_plus_plus_primer/src/Makefile")
-     (project-root . "/home/whr/workspace/project/c_plus_plus_primer/src/")
-     (project-root . "/home/whr/workspace/project/algorithm/src/")
-     (project-bin . "/home/whr/workspace/project/algorithm/src/bin/algorithm")
-     (project-makefile . "/home/whr/workspace/project/algorithm/src/Makefile")))))
+    ((project-build-root . "/home/whr/workspace/project/c_plus_plus_primer/src/build/")
+     (project-bin . "/home/whr/workspace/project/c_plus_plus_primer/src/build/bin/c_plus_plus_primer")
+     (project-makefile . "/home/whr/workspace/project/c_plus_plus_primer/src/build/Makefile")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
