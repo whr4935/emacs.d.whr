@@ -44,15 +44,15 @@
 
 (defun init-company ()
   (global-company-mode)
-  (define-key c-mode-map (kbd "C-;") 'company-complete)
-  (define-key c++-mode-map (kbd "C-;") 'company-complete)
+  (global-set-key (kbd "C-;") 'company-complete)
+  ;; (define-key c++-mode-map (kbd "C-;") 'company-complete)
   (setq company-show-numbers t
         company-tooltip-limit 20
-        company-minimum-prefix-length 2
+        ;;company-minimum-prefix-length 2
         company-dabbrev-downcase nil
         company-idle-delay nil)
 
-  (add-to-list 'company-backends '(company-irony company-irony-c-headers ;; company-gtags
-                                                 )
-               ))
+  (add-to-list 'company-backends 'company-irony-c-headers)
+  (add-to-list 'company-backends 'company-irony)
+  )
 (add-hook 'after-init-hook 'init-company)

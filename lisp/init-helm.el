@@ -1,4 +1,3 @@
-
 (provide 'init-helm)
 
 ;; helm config
@@ -48,7 +47,7 @@
 (add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
 
 
-(setq tramp-default-method "ssh") 
+(setq tramp-default-method "ssh")
 (setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
 
@@ -83,4 +82,4 @@
 (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
 (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
 (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-
+(define-key helm-gtags-mode-map (kbd "C-c g h") 'helm-gtags-show-stack)
