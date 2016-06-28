@@ -47,10 +47,12 @@
   (global-set-key (kbd "C-;") 'company-complete)
   ;; (define-key c++-mode-map (kbd "C-;") 'company-complete)
   (setq company-show-numbers t
-        company-tooltip-limit 20
+        ;; company-tooltip-limit 20
         ;;company-minimum-prefix-length 2
         company-dabbrev-downcase nil
-        company-idle-delay nil)
+        company-dabbrev-ignore-case nil
+        company-idle-delay 0.2
+        company-require-match nil)
 
   (add-to-list 'company-backends 'company-irony-c-headers)
   (add-to-list 'company-backends 'company-irony)
