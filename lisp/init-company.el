@@ -54,7 +54,8 @@
         company-idle-delay 0.2
         company-require-match nil)
 
-  (add-to-list 'company-backends 'company-irony-c-headers)
-  (add-to-list 'company-backends 'company-irony)
+  (add-to-list 'company-backends '(company-irony-c-headers company-irony))
+  ;; (add-to-list 'company-backends 'company-irony-c-headers)
+  ;; (add-to-list 'company-backends 'company-irony)
   )
 (add-hook 'after-init-hook 'init-company)
