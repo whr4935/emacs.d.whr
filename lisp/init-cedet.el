@@ -26,6 +26,7 @@
 ;; (global-semantic-idle-summary-mode 1)
 (global-semantic-mru-bookmark-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+;; (global-semantic-idle-local-symbol-highlight-mode 1)
 
 ;; if you want to enable support for gnu global
 (when (cedet-gnu-global-version-check t)

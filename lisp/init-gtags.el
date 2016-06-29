@@ -1,4 +1,3 @@
-
 (provide 'init-gtags)
 
 
@@ -9,7 +8,7 @@
           (lambda ()
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
               (ggtags-mode 1)
-              (setq-local imenu-create-index-function #'ggtags-build-imenu-index)
+              ;; (setq-local imenu-create-index-function #'ggtags-build-imenu-index)
               )))
 ;; (setq-local imenu-create-index-function #'ggtags-build-imenu-index)
 (add-hook 'lisp-mode-hook (lambda()
@@ -23,5 +22,3 @@
 (define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
 
 (define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
-
-

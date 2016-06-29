@@ -148,8 +148,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; function-args                      ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'function-args)
-(fa-config-default)
+;; (require 'function-args)
+;; (fa-config-default)
 
 ;;;;;;;;;;;;
 ;; rebox2 ;;
