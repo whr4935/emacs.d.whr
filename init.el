@@ -210,7 +210,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; sr-speedbar                        ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq sr-speedbar-right-side nil)
+;; (setq sr-speedbar-right-side nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package: dtrt-indent ;;
