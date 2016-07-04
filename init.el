@@ -95,7 +95,7 @@
 (add-hook 'prog-mode-hook (lambda () (highlight-symbol-mode)))
 (add-hook 'org-mode-hook (lambda () (highlight-symbol-mode)))
 
-(setq highlight-symbol-idle-delay 0.2
+(setq highlight-symbol-idle-delay 0.6
       highlight-symbol-on-navigation-p t)
 
 (global-set-key [(control shift mouse-1)]

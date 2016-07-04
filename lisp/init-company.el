@@ -48,18 +48,18 @@
   ;; (define-key c++-mode-map (kbd "C-;") 'company-complete)
   (setq company-show-numbers t
         ;; company-tooltip-limit 20
-        ;; company-minimum-prefix-length 2
-        company-dabbrev-downcase nil
-        company-dabbrev-ignore-case nil
-        ;; company-idle-delay 0.2
-        company-require-match nil
+        company-minimum-prefix-length 2
+        ;; company-dabbrev-downcase nil
+        ;; company-dabbrev-ignore-case nil
+        company-idle-delay 0.3
+        ;; company-require-match nil
         )
 
   (add-to-list 'company-backends '(company-irony-c-headers company-irony))
-  ;; (setq company-backends (delete 'company-dabbrev company-backends))
-  ;; (add-to-list 'company-backends 'company-irony-c-headers)
-  ;; (add-to-list 'company-backends 'company-irony)
-
   (setq company-backends (delete 'company-dabbrev company-backends))
+  (setq company-backends (delete 'company-gtags company-backends))
+  (setq company-backends (delete 'company-clang company-backends))
+  (setq company-backends (delete 'company-semantic company-backends))
+
   )
 (add-hook 'after-init-hook 'init-company)
