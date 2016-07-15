@@ -241,27 +241,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(safe-local-variable-values
-   (quote
-    ((project-bin . "~/workspace/project/gdb_test/net/build/bin/server")
-     (project-build-root . "~/workspace/project/gdb_test/net/build/")
-     (project-bin . "~/workspace/project/gdb_test/net/build/bin/net")
-     (project-makefile . "~/workspace/project/gdb_test/net/build/Makefile")
-     (project-bin . "~/workspace/project/gdb_test/psax/build/bin/psax")
-     (project-makefile . "~/workspace/project/gdb_test/psax/build/Makefile")
-     (project-build-root . "~/workspace/project/gdb_test/psax/build/")
-     (project-bin . "~/workspace/project/gdb_test/cstring/build/bin/cstring")
-     (project-makefile . "~/workspace/project/gdb_test/cstring/build/Makefile")
-     (project-build-root . "~/workspace/project/gdb_test/cstring/build/")
-     (project-bin . "~/workspace/project/gdb_test/bintree/build/bin/bintree")
-     (project-makefile . "~/workspace/project/gdb_test/bintree/build/Makefile")
-     (project-build-root . "~/workspace/project/gdb_test/bintree/build/")
-     (project-bin . "~/workspace/project/gdb_test/insert/build/bin/gdb_test")
-     (project-makefile . "~/workspace/project/gdb_test/insert/build/Makefile")
-     (project-build-root . "~/workspace/project/gdb_test/insert/build/")
-     (project-build-root . "/home/whr/workspace/project/c_plus_plus_primer/src/build/")
-     (project-bin . "/home/whr/workspace/project/c_plus_plus_primer/src/build/bin/c_plus_plus_primer")
-     (project-makefile . "/home/whr/workspace/project/c_plus_plus_primer/src/build/Makefile")))))
+ '(safe-local-variable-values (quote ((project-bin . "~/workspace/whr/project/c_plus_plus_primer/src/build/bin/c_plus_plus_primer") (project-makefile . "~/workspace/whr/project/c_plus_plus_primer/src/build/Makefile") (project-build-root . "~/workspace/whr/project/c_plus_plus_primer/src/build/") (project-bin . "~/workspace/project/gdb_test/net/build/bin/server") (project-build-root . "~/workspace/project/gdb_test/net/build/") (project-bin . "~/workspace/project/gdb_test/net/build/bin/net") (project-makefile . "~/workspace/project/gdb_test/net/build/Makefile") (project-bin . "~/workspace/project/gdb_test/psax/build/bin/psax") (project-makefile . "~/workspace/project/gdb_test/psax/build/Makefile") (project-build-root . "~/workspace/project/gdb_test/psax/build/") (project-bin . "~/workspace/project/gdb_test/cstring/build/bin/cstring") (project-makefile . "~/workspace/project/gdb_test/cstring/build/Makefile") (project-build-root . "~/workspace/project/gdb_test/cstring/build/") (project-bin . "~/workspace/project/gdb_test/bintree/build/bin/bintree") (project-makefile . "~/workspace/project/gdb_test/bintree/build/Makefile") (project-build-root . "~/workspace/project/gdb_test/bintree/build/") (project-bin . "~/workspace/project/gdb_test/insert/build/bin/gdb_test") (project-makefile . "~/workspace/project/gdb_test/insert/build/Makefile") (project-build-root . "~/workspace/project/gdb_test/insert/build/") (project-build-root . "/home/whr/workspace/project/c_plus_plus_primer/src/build/") (project-bin . "/home/whr/workspace/project/c_plus_plus_primer/src/build/bin/c_plus_plus_primer") (project-makefile . "/home/whr/workspace/project/c_plus_plus_primer/src/build/Makefile")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
