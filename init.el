@@ -155,3 +155,20 @@
 ;;; no-byte-compile: t
 ;;; End:
 (put 'erase-buffer 'disabled nil)
+
+
+(require-init 'util-lisp)
+(defun kh/add-hook (hooks funcs &optional append local)
+  "More general definition of function add-hook."
+  (unless (listp hooks)
+    (setq hooks (list hooks)))
+  (unless (listp funcs)
+    (setq funcs (list funcs)))
+  (dolist (hook hooks)
+    (dolist (func funcs)
+      (add-hook hook func append local))))
+(setq scheme-program-name "guile")
+(kh/add-hook '(scheme-mode-hook)
+             '((lambda ()
+                 (local-set-key (kbd "C-x C-e") 'kh/scheme-send-last-sexp))))
+
